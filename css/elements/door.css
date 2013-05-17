@@ -1,0 +1,108 @@
+room door {
+    display: block;
+    position: absolute;
+    background: orange;
+    z-index: 500;
+    cursor: pointer;
+}
+
+room door.left,
+room door.right {
+    top: 37.5%;
+    height: 25%;
+    width: 8px;
+}
+room door.left {
+    left: -6px;
+}
+room door.right {
+    right: -6px;
+}
+room door.top,
+room door.bottom {
+    left: 37.5%;
+    height: 8px;
+    width: 25%;
+}
+room door.top {
+    top: -6px;
+}
+room door.bottom {
+    bottom: -6px;
+}
+room door.left:after,
+room door.right:after,
+room door.top:after,
+room door.bottom:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 0%;
+    background: #FFFFFF;
+    position: absolute;
+}
+room door.top:after,
+room door.bottom:after {
+    width: 0%;
+    height: 100%;
+}
+room door.left.open:after,
+room door.right.open:after {
+    height: 100%;
+    -webkit-animation: open-door-vertical 0.25s;
+}
+room door.left.close:after,
+room door.right.close:after {
+    height: 0%;
+    -webkit-animation: close-door-vertical 0.25s;
+}
+room door.top.open:after,
+room door.bottom.open:after {
+    width: 100%;
+    -webkit-animation: open-door-horizontal 0.25s;
+}
+room door.top.close:after,
+room door.bottom.close:after {
+    width: 0%;
+    -webkit-animation: close-door-horizontal 0.25s;
+}
+@-webkit-keyframes open-door-vertical {
+    0% {
+        top: 50%;
+        height: 0%;
+    }
+    100% {
+        top: 0;
+        height: 100%;
+    }
+}
+@-webkit-keyframes close-door-vertical {
+    0% {
+        top: 0;
+        height: 100%;
+    }
+    100% {
+        top: 50%;
+        height: 0%;
+    }
+}
+@-webkit-keyframes open-door-horizontal {
+    0% {
+        left: 50%;
+        width: 0%;
+    }
+    100% {
+        left: 0;
+        width: 100%;
+    }
+}
+@-webkit-keyframes close-door-horizontal {
+    0% {
+        left: 0;
+        width: 100%;
+    }
+    100% {
+        left: 50%;
+        width: 0%;
+    }
+}

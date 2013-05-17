@@ -14,7 +14,7 @@
 			width: 30%;
 			height: 25%;
 			border-radius: 50%;
-			background: #FFFFFF;
+			background: rgba(0,0,0,0);
 			content: '';
 			display: block;
 			position: absolute;
@@ -128,7 +128,10 @@
 		}
 		@-webkit-keyframes rotating-wing-back {
 			0% {
-				-webkit-transform: rotate(360deg);
+				-webkit-transform: rotate(0deg);
+			}
+			50% {
+				-webkit-transform: rotate(-60deg);
 			}
 			100% {
 				-webkit-transform: rotate(0deg);

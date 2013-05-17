@@ -1,0 +1,29 @@
+room {
+    border-radius: 8px;
+    width: 150px;
+    height: 150px;
+    border: 2px solid black;
+    position: absolute;
+    display: block;
+}
+room:after,
+room:before {
+    content: '';
+    width: 50%;
+    height: 50%;
+    display: block;
+    border: 1px solid black;
+}
+room:before {
+    content: '';
+    border-top: 0;
+    border-left: 0;
+}
+room:after {
+    content: '';
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    border-bottom: 0;
+    border-right: 0;
+}
